@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+    image-rendering: pixelated;
+    font-family: 'Minecraft', sans-serif;
+    color: white;
+}
+
+html, body, #main_container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    background: black;
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../assets/font.ttf') format('truetype');
+}
+
+.screen {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 泥土装饰 */
+.dirt-background {
+    background: url("../assets/minecraft/textures/gui/options_background.png") repeat;
+    background-size: 100px;
+}
+
+.dark-filter {
+    background: rgba(0, 0, 0, 0.63);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button {
+    background: url("../assets/minecraft/textures/gui/widgets.png") no-repeat 0 27.8%;
+    background-size: 127% 1243%;
+    border: none;
+}
+
+.button:hover {
+    background-position: 0 36.2%;
+}
+
+.button[disabled], .button:active {
+    background-position: 0 19.5%;
+}
+
+/* Minecraft 字体样式 */
+.color-0 { color: #000000; } /* 黑色 */
+.color-1 { color: #0000AA; } /* 深蓝 */
+.color-2 { color: #00AA00; } /* 深绿 */
+.color-3 { color: #00AAAA; } /* 青色 */
+.color-4 { color: #AA0000; } /* 深红 */
+.color-5 { color: #AA00AA; } /* 紫色 */
+.color-6 { color: #FFAA00; } /* 金色 */
+.color-7 { color: #AAAAAA; } /* 灰色 */
+.color-8 { color: #555555; } /* 深灰 */
+.color-9 { color: #5555FF; } /* 蓝色 */
+.color-a { color: #55FF55; } /* 亮绿 */
+.color-b { color: #55FFFF; } /* 浅蓝 */
+.color-c { color: #FF5555; } /* 亮红 */
+.color-d { color: #FF55FF; } /* 粉色 */
+.color-e { color: #FFFF55; } /* 黄色 */
+.color-f { color: #FFFFFF; } /* 白色 */
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.underlined { text-decoration: underline; }
+.strikethrough { text-decoration: line-through; }
+.obfuscated {
+    animation: text-obfuscate 0.2s infinite linear;
+}
+
+/* 模拟 Minecraft 中的随机字符效果 */
+@keyframes text-obfuscate {
+    0% { content: " " }
+    2.7% { content: '0'; }
+    5.4% { content: '1'; }
+    8.1% { content: '2'; }
+    10.8% { content: '3'; }
+    13.5% { content: '4'; }
+    16.2% { content: '5'; }
+    18.9% { content: '6'; }
+    21.6% { content: '7'; }
+    24.3% { content: '8'; }
+    27% { content: '9'; }
+    29.7% { content: 'a'; }
+    32.4% { content: 'b'; }
+    35.1% { content: 'c'; }
+    37.8% { content: 'd'; }
+    40.5% { content: 'e'; }
+    43.2% { content: 'f'; }
+    45.9% { content: 'g'; }
+    48.6% { content: 'h'; }
+    51.3% { content: 'i'; }
+    54% { content: 'j'; }
+    56.7% { content: 'k'; }
+    59.4% { content: 'l'; }
+    62.1% { content: 'm'; }
+    64.8% { content: 'n'; }
+    67.5% { content: 'o'; }
+    70.2% { content: 'p'; }
+    72.9% { content: 'q'; }
+    75.6% { content: 'r'; }
+    78.3% { content: 's'; }
+    81% { content: 't'; }
+    83.7% { content: 'u'; }
+    86.4% { content: 'v'; }
+    89.1% { content: 'w'; }
+    91.8% { content: 'x'; }
+    94.5% { content: 'y'; }
+    100% { content: 'z'; }
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(16,16,16,0.94);
+    border-radius: 0;
+    border: 4px solid rgba(41, 0, 92, 0.93);
+    --shadow-col1: rgba(16,16,16);
+    --shadow-size: 5px;
+    --shadow-size2: -5px;
+    box-shadow:
+            0 var(--shadow-size2) 0 0 var(--shadow-col1),
+            var(--shadow-size2) 0 0 0 var(--shadow-col1),
+            var(--shadow-size) 0 0 0 var(--shadow-col1),
+            0 var(--shadow-size) 0 0 var(--shadow-col1);
+    /*box-shadow: rgba(41, 0, 92, 0.93) 5px 5px;*/
+    padding: 10px;
+    font-size: 1.4rem;
+    pointer-events: none;
+    z-index: 10;
+}

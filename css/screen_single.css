@@ -1,0 +1,45 @@
+#screen-single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen-single-main-container {
+    z-index: 5;
+}
+
+#screen-single-main-container-head {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+#screen-single-main-container-save-list {
+    width: 100vw;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.75)
+}
+
+#screen-single-main-container-buttons-cont {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#screen-single-main-container-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.screen-single-main-container-button {
+    width: 10vw;
+    height: 5vh;
+    margin: 5px;
+    font-size: 1.5rem;
+}

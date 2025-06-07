@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>WebCraft</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/screen_loading.css">
+    <link rel="stylesheet" href="css/screen_title.css">
+    <link rel="stylesheet" href="css/screen_single.css">
+</head>
+<body>
+<div id="main_container">
+    <div class="screen" id="screen-loading" data-display="flex">
+        <!--<img src="assets/textures/gui/title/mojangstudios.png" id="screen-loading-ojang">-->
+        <div id="screen-loading-progress-container">
+            <div id="screen-loading-progress"></div>
+        </div>
+    </div>
+    <div class="screen" id="screen-title" style="display: none" data-display="flex">
+        <div id="title-background">
+            <img draggable="false" class="title-background-image" src="./assets/minecraft/textures/gui/title/background/panorama_0.png" data-hash-pth="minecraft/textures/gui/title/background/panorama_0.png" data-hash-type="image">
+            <img draggable="false" class="title-background-image" src="./assets/minecraft/textures/gui/title/background/panorama_1.png" data-hash-pth="minecraft/textures/gui/title/background/panorama_1.png" data-hash-type="image">
+            <img draggable="false" class="title-background-image" src="./assets/minecraft/textures/gui/title/background/panorama_2.png" data-hash-pth="minecraft/textures/gui/title/background/panorama_2.png" data-hash-type="image">
+            <img draggable="false" class="title-background-image" src="./assets/minecraft/textures/gui/title/background/panorama_3.png" data-hash-pth="minecraft/textures/gui/title/background/panorama_3.png" data-hash-type="image">
+        </div>
+        <!-- 界面遮罩和内容 -->
+        <div id="title-overlay">
+            <div id="title-title-container">
+                <div id="title-title">
+                    <div id="title-title-cont-main">
+                        <div draggable="false" id="title-title-img0"></div>
+                        <div draggable="false" id="title-title-img0_1"></div>
+                    </div>
+                    <div draggable="false" id="title-title-img1"></div>
+                </div>
+                <span id="title-title-splash">电玩小子</span>
+            </div>
+
+            <div id="title-menu">
+                <div class="title-button button" onclick="MinecraftInstance.setScreen('single')">单人游戏</div>
+                <div class="title-button button" data-show-tooltip="true" data-tooltip="该功能正在开发中！" disabled="true">多人游戏</div>
+                <div class="title-button button">选项</div>
+                <div class="title-button button" onclick="MinecraftInstance.exit()">退出游戏</div>
+            </div>
+
+            <span id="title-version">Minecraft 1.19.2</span>
+            <div id="title-thanks">
+                <span onclick="window.open('https://github.com/Hxgfk/WebCraft')">Github Repo</span>
+                <span style="margin-left: 10px" onclick="window.open('./thanks.html')">Thanks</span>
+            </div>
+        </div>
+    </div>
+    <div class="screen dirt-background" id="screen-single" style="display: none" data-display="flex">
+        <div class="dark-filter"></div>
+        <div id="screen-single-main-container">
+            <div id="screen-single-main-container-head">
+                <span>存档列表</span>
+            </div>
+            <div id="screen-single-main-container-save-list"></div>
+            <div id="screen-single-main-container-buttons-cont">
+                <div id="screen-single-main-container-buttons">
+                    <button class="button screen-single-main-container-button">新建存档</button>
+                    <button class="button screen-single-main-container-button">导入存档</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="screen" id="screen-game" style="display: none" data-display="flex">
+        <canvas id="game-canvas"></canvas>
+    </div>
+</div>
+<script src="./dist/main.bundle.js"></script>
+<script>
+</script>
+</body>
+</html>

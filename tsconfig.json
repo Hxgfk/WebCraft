@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "strict": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "gl-matrix": ["./lib/gl-matrix"]
+    },
+    "types": ["lodash"]
+  },
+  "include": ["js-src/**/*.ts"]
+}
